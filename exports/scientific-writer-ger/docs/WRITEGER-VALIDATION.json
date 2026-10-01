@@ -1,0 +1,30 @@
+{
+  "original_asset_sha256": {
+    "WriteGer_Extractor_v2.py": "41aac27921d590120d81c6523ade56ad396eeca794973d3c03cfad17272cf431",
+    "WriteGer_Model_Parameters_Original_v2.json": "92f8808f79c267eb7995a077f197f2c9cc1af4057ee5929492e2bcaf512a22d7",
+    "WriteGer_Auditor_v2.py": "8cfb64b16f8dffcf3083435d63a1f2151f398956e33ff8e7f1b7600f67382b71"
+  },
+  "checks_passed": [
+    "byte-preserving copy",
+    "positive definite and inverse-consistent matrices",
+    "extractor-auditor parity",
+    "distance matches independent covariance solve",
+    "section only changes deviation model",
+    "English rejected",
+    "short text rejected",
+    "TXT and DOCX parity",
+    "seven portable automated tests",
+    "real Spanish PDF end-to-end using explicit pypdf reader"
+  ],
+  "tested_inputs": "Synthetic Spanish prose, not an authentic corpus document",
+  "not_reproduced": [
+    "original corpus training",
+    "original leave-one-document-out calibration",
+    "original pdftotext PDF route"
+  ],
+  "pdf_check": {
+    "file": "2017_Influencia_del_estado_de_coloracion_y_del_agente_de_extraccion_sobre_la_obtencion_de_pectina_a_parti.pdf",
+    "purpose": "execution smoke test; whole PDF not used as a clean training sample",
+    "reader": "pypdf"
+  }
+}

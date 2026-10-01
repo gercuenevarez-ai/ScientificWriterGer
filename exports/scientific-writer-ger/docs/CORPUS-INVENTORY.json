@@ -1,0 +1,163 @@
+[
+  {
+    "file": "1739219675SJA_39_s2_129-138.pdf",
+    "file_sha256": "29900daea3a816a61546e1005135e30b951693afac791b53678d0fd1ea07374a",
+    "extracted_text_sha256": "74c955af413b1ffb59a6e9413bc88b8053c53fc303b3f6e2536da3eb18df6881",
+    "role": "matrix_article",
+    "authored_sections": "not individually confirmed",
+    "training_used": false,
+    "anchor": "nitrogen",
+    "title": "Physicochemical Factors Affecting Nitrogen Mineralization in Soil Cultivated with Tropical Pastures",
+    "body_language": "en",
+    "use": "argument architecture; not Spanish metric training"
+  },
+  {
+    "file": "2014_Comportamiento_de_DBO_5_DQO_NH_4_y_NO_3_mediante_el_diseno_de_un_Humedal_Artificial_Subsuperficial_p.pdf",
+    "file_sha256": "5b3f645a8d34eef956bffec77f4bbccf270103aef287b2fee0ac89cbdab093bf",
+    "extracted_text_sha256": "7802fde6d218fcf24923e67de70cfd000e303676b35056c3006dd863fd0d6341",
+    "role": "complementary",
+    "authored_sections": "not individually confirmed",
+    "training_used": false
+  },
+  {
+    "file": "2017_Influencia_del_estado_de_coloracion_y_del_agente_de_extraccion_sobre_la_obtencion_de_pectina_a_parti.pdf",
+    "file_sha256": "b4087d36545965e5f2d11f8532479ae4b39aee4f939ed7c0b4567c5271562441",
+    "extracted_text_sha256": "45b79f54cab9f9bc3a67acfa6a0cdfca8fcc56fa07e9fa89c9248f422795ca6c",
+    "role": "complementary",
+    "authored_sections": "not individually confirmed",
+    "training_used": false
+  },
+  {
+    "file": "2019_Vulnerability_to_climate_change_of_smallholder_cocoa_producers_in_the_province_of_Manabi_Ecuador.pdf",
+    "file_sha256": "356bea9c8f137b4896d2bc7e976e62c41c47ef77b46893a11f0248a8c6a1eb36",
+    "extracted_text_sha256": "0d8e95924b693364d518c3c5e3901dbfb998f6e39d8a42dce1edbf0f17557c24",
+    "role": "complementary",
+    "authored_sections": "not individually confirmed",
+    "training_used": false
+  },
+  {
+    "file": "2020_Analisis_microbiologico_de_quesos_frescos_comercializados_en_la_ciudad_de_Babahoyo.pdf",
+    "file_sha256": "1779fe677d990d04885a0a2879bb1721c74de6ba9108b5d80124894cf553c210",
+    "extracted_text_sha256": "28317a5ed87d22a89041b7cadc19d0819c40e5576e16cf96bb774d135f7c097a",
+    "role": "complementary",
+    "authored_sections": "not individually confirmed",
+    "training_used": false
+  },
+  {
+    "file": "2020_Efecto_del_uso_de_bacterias_acido_lacticas_en_la_inhibicion_del_deterioro_microbiologico_de_filetes_.pdf",
+    "file_sha256": "bb74aeeab7fd4a4b5a650862132013d8a76838fecad09bb85fc48577883a8250",
+    "extracted_text_sha256": "00913a6149030a85eeb1932eadac1a1faee81d7cb20a08bec859fc9760a7e739",
+    "role": "complementary",
+    "authored_sections": "not individually confirmed",
+    "training_used": false
+  },
+  {
+    "file": "2021_Determinacion_de_propiedades_antimicrobianas_y_termofisicas_en_un_producto_carnico_con_hidrolato_de_.pdf",
+    "file_sha256": "5b4e409e8b4f8f174f563070b8795d583e6c4fbb0a5a66452b4bce8409c9a3dd",
+    "extracted_text_sha256": "bd97e74941e02e51efdc8ebc2800d7b5c297a1bc4508471e03739d7600a61c08",
+    "role": "complementary",
+    "authored_sections": "not individually confirmed",
+    "training_used": false
+  },
+  {
+    "file": "2021_Evaluacion_Microbiologica_de_Pescado_Fresco_Albacora_Thunnus_alalunga_en_el_Mercado_Central_del_Cant.pdf",
+    "file_sha256": "69db1c7e5b8bb75f55782963fa569a5a504331670533b974d477d740508de91d",
+    "extracted_text_sha256": "99ec16018b92de8eab85037070bec7e436c77677cbb648ebea7b209b44894e62",
+    "role": "complementary",
+    "authored_sections": "not individually confirmed",
+    "training_used": false
+  },
+  {
+    "file": "2022_Propiedades_del_queso_artesanal_elaborado_a_partir_de_vacas_lecheras_alimentadas_con_pastos_tropical.pdf",
+    "file_sha256": "d5ada79825a8678bbb32f970808f73a7756e571be9f221256e4f0ad363606723",
+    "extracted_text_sha256": "fb72d95dd5d34bf91b7529e6efa53188caf137017e843de2fc01f2eb417b01c7",
+    "role": "complementary",
+    "authored_sections": "not individually confirmed",
+    "training_used": false
+  },
+  {
+    "file": "2023_Analisis_de_la_inhibicion_de_microorganismos_proteoliticos_en_filetes_de_tilapia_roja_Oreochromis_sp.pdf",
+    "file_sha256": "94d7cb5ad2242a5708262e0894ab198356cb1d26cf36fb717b0f5416575acf1a",
+    "extracted_text_sha256": "47769fa5a70704ecbb0d8db81c757b832e8d809453986642665771a00bbd22c2",
+    "role": "complementary",
+    "authored_sections": "not individually confirmed",
+    "training_used": false
+  },
+  {
+    "file": "2024_Use_of_Orange_Peel_Citrus_X_sinensis_for_Obtaining_Essential_Extract_as_a_Natural_Degreaser.pdf",
+    "file_sha256": "cf05c6cd77af32127c620cef1ed80b29fab21a04c1574f96336aa1f17204cd38",
+    "extracted_text_sha256": "3800ba74a2e09bb9999a032399ce64ffdaf0006feee0382b00d82681c6138903",
+    "role": "complementary",
+    "authored_sections": "not individually confirmed",
+    "training_used": false
+  },
+  {
+    "file": "2025_Analisis_quimico_proximal_de_los_residuos_procedentes_de_la_elaboracion_de_cerveza_artesanal_y_su_ac.pdf",
+    "file_sha256": "e3d59902913717b757de32162c8480468611588fb99d090cccce07a8da2ff7af",
+    "extracted_text_sha256": "828ee1f204b2c057088b2d612a0f765130fbf7b5a8e8f54bd69480b1b66032f0",
+    "role": "complementary",
+    "authored_sections": "not individually confirmed",
+    "training_used": false
+  },
+  {
+    "file": "2025_Economia_circular_y_empleo_local_oportunidades_para_el_desarrollo_economico_sostenible_en_la_comunid.pdf",
+    "file_sha256": "62aac723a9323f840bd27e868b10b7a71f6f448f1ca0a3ec6824682466811054",
+    "extracted_text_sha256": "b87abcccc225798525c60f281a3da5455a8e879b645143ba3f4fc846f49dcd75",
+    "role": "complementary",
+    "authored_sections": "not individually confirmed",
+    "training_used": false
+  },
+  {
+    "file": "3a181628-a035-4a72-8753-0e658584c52d_26250_-_zsolt_sandor_v2.pdf",
+    "file_sha256": "8293f1a7ba358da910291ff6be67fa4d86cdbe8d0011e8ac78c922c5babcedb6",
+    "extracted_text_sha256": "5397dd9cd9a0a7c7f612091133bc3fffa640584366beaa48f5a02ef127ae73d7",
+    "role": "complementary",
+    "authored_sections": "not individually confirmed",
+    "training_used": false
+  },
+  {
+    "file": "Articulo2.pdf",
+    "file_sha256": "44fb460b333d6d318f217b84dfd8103b9225c560927508d27e01e4ca64e97ae8",
+    "extracted_text_sha256": "d20c73874377c5d16f44058f4cee25233e425cfd893e81627ab172b5573b062e",
+    "role": "complementary",
+    "authored_sections": "not individually confirmed",
+    "training_used": false
+  },
+  {
+    "file": "Cp11_Cuenca+Nevárez.pdf",
+    "file_sha256": "098c9ed7dbd5de62650437f5e43463d3398bdf1ee6027a6f38cfb22d7590563c",
+    "extracted_text_sha256": "4303cdd1b88dc56099cdae47fa2c429073f299d87d2eaac3ebddbe85b6d644e6",
+    "role": "matrix_article",
+    "authored_sections": "not individually confirmed",
+    "training_used": false,
+    "anchor": "lactate",
+    "title": "Efficacy of zinc lactate and Lactobacillus bulgaricus on nutrition and health of broiler chickens",
+    "body_language": "en",
+    "use": "argument architecture; not Spanish metric training"
+  },
+  {
+    "file": "aa10fe7d-9e45-45ac-8777-4e3acf843d1f_27057_-_zsolt_sandor.pdf",
+    "file_sha256": "3a5a0fda0b4f623ccda4d37f36df29a6e438f739e5de2c7681b6134482db7b6d",
+    "extracted_text_sha256": "1474cf91f3f55dfcd7649a426c07cd8836c26a7e18a4f5d92dec88ad7f453580",
+    "role": "complementary",
+    "authored_sections": "not individually confirmed",
+    "training_used": false
+  },
+  {
+    "file": "cacedeno,+Editor_a+de+la+revista,+e6.pdf",
+    "file_sha256": "69db1c7e5b8bb75f55782963fa569a5a504331670533b974d477d740508de91d",
+    "extracted_text_sha256": "99ec16018b92de8eab85037070bec7e436c77677cbb648ebea7b209b44894e62",
+    "role": "complementary",
+    "authored_sections": "not individually confirmed",
+    "training_used": false,
+    "duplicate_of": "2021_Evaluacion_Microbiologica_de_Pescado_Fresco_Albacora_Thunnus_alalunga_en_el_Mercado_Central_del_Cant.pdf"
+  },
+  {
+    "file": "v_7_2_art_1432.pdf",
+    "file_sha256": "66003e6983d437c0267ea01dbada25fc8d6fa29d07e128982a56ef816d0f0196",
+    "extracted_text_sha256": "97f57ee67e01e252ae93d38e52419d40e8d964166643bb284463e207c89eee39",
+    "role": "complementary",
+    "authored_sections": "not individually confirmed",
+    "training_used": false
+  }
+]

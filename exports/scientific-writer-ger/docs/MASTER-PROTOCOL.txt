@@ -1,0 +1,171 @@
+Resumen de todo lo hablado
+Construimos un ecosistema de trabajo para que tus artículos no dependan de una sola IA ni de revisiones improvisadas. La lógica es separar funciones: una herramienta controla la ciencia, otra controla tu estilo de escritura y dos modelos externos funcionan como pares ciegos independientes.
+ScientistGer quedó definido como el sistema que revisa el contenido científico: problema, objetivos, diseño experimental, estadística, interpretación biológica, bibliografía, Resultados-Discusión, coherencia interna e integridad entre datos, resultados y conclusiones.
+WriteGer quedó como la última capa estilística. Fue construido a partir de tu propio corpus científico y utiliza variables estilométricas cuantificadas, no reglas genéricas de “humanización”. Entre ellas están longitud y dispersión de las oraciones, conectores, subordinación, nominalizaciones, palabras funcionales, diversidad léxica, puntuación y estructura de párrafos.
+Su métrica principal es:
+\[
+D_{WG}
+\]
+que mide la distancia del texto respecto de tu espacio estilométrico auténtico.
+El rango empírico que obtuvimos mediante validación leave-one-document-out llega aproximadamente hasta:
+\[
+D_{WG}=5.906
+\]
+Esto no significa “59 % de IA” ni algo parecido. Es una distancia estilométrica respecto de tus escritos reales.
+En el primer artículo que utilizamos como prueba real:
+\[
+D_{WG}=7.133
+\]
+antes de WriteGer, es decir, fuera de tu rango.
+Después de la transformación final:
+\[
+D_{WG}=5.774
+\]
+quedó dentro del rango auténtico observado.
+Por tanto, establecimos una regla importante:
+\[
+\boxed{\text{Ciencia correcta + compatibilidad estilométrica = STOP}}
+\]
+No seguimos modificando un artículo simplemente para bajar más el número.
+También concluimos que no conviene aplicar después de WriteGer un “humanizador” genérico, porque puede destruir precisamente las características estilométricas que acabamos de ajustar.
+Gemini y Claude entrarán como revisores externos independientes, no como redactores. Ambos reciben exactamente la misma versión del artículo y ninguno conoce el informe del otro.
+Gemini será:
+\[
+\boxed{\text{Revisor ciego 1}}
+\]
+Claude será:
+\[
+\boxed{\text{Revisor ciego 2}}
+\]
+Cada uno produce exclusivamente un informe.
+Después, ambos informes regresan a ScientistGer. ScientistGer no obedece automáticamente a los revisores: compara las críticas con el diseño, los datos, los análisis y la literatura y las clasifica como válidas, parcialmente válidas, discutibles o inválidas.
+ScientistGer realiza entonces las correcciones científicas justificadas.
+Como esas correcciones pueden cambiar la redacción, el manuscrito pasa una última vez por WriteGer.
+Después de ese último WriteGer:
+\[
+\boxed{\text{Artículo terminado}}
+\]
+No vuelve a Gemini, Claude ni a otro humanizador, salvo que posteriormente una revista real solicite cambios.
+MAPA OPERATIVO DEFINITIVO — ECOSISTEMA DE ARTÍCULOS
+ARTÍCULO / BORRADOR
+        ↓
+SCIENTISTGER
+        ↓
+WRITEGER
+        ↓
+VERSIÓN CONGELADA
+        ↓
+REVISIÓN POR PARES
+     ↙          ↘
+ GEMINI        CLAUDE
+   ↓              ↓
+INFORME 1      INFORME 2
+     ↘          ↙
+       SCIENTISTGER
+            ↓
+    INFORME CONSOLIDADO
+            ↓
+    CORRECCIÓN CIENTÍFICA
+       [SCIENTISTGER]
+            ↓
+        WRITEGER FINAL
+            ↓
+      ARTÍCULO TERMINADO
+
+Paso a paso definitivo
+1. Preparar el artículo. Debes tener el manuscrito en DOCX, preferentemente con título, resumen, introducción, materiales y métodos, resultados-discusión, conclusiones, figuras, tablas y referencias disponibles. No hace falta que esté perfecto; debe contener la ciencia real del estudio.
+   Archivo de entrada:
+   Articulo_X.docx
+   No necesitas todavía Gemini ni Claude.
+2. Pasar el artículo por ScientistGer. Me subes el DOCX y utilizas esta orden:
+   ScientistGer: revisa científicamente este artículo completo. Audita metodología, diseño experimental, estadística, interpretación biológica, correspondencia entre objetivos, resultados y conclusiones, referencias e integridad de cifras. Corrige únicamente lo que tenga fundamento científico y conserva los datos originales. Déjalo preparado para pasar a WriteGer.
+   
+   Aquí ScientistGer revisa la ciencia. El producto será el artículo científicamente depurado.
+3. Aplicar WriteGer. Con la versión científicamente correcta utilizas:
+   ScientistGer: aplica WriteGer a este artículo. Conserva íntegramente resultados, cifras, unidades, tratamientos, especies, análisis estadísticos, referencias y alcance inferencial. Audita el D_WG antes y después y detente cuando el texto sea compatible con mi rango estilométrico auténtico.
+   
+   WriteGer trabaja sobre la forma de escribir, no sobre la ciencia.
+   El resultado se convierte en:
+   \[
+   \boxed{\text{VERSIÓN CONGELADA}}
+   \]
+   Esa es exactamente la versión que reciben los dos revisores externos.
+4. Enviar la versión congelada a Gemini — Revisor ciego 1. Le entregas el artículo y utilizas:
+   Actúa como Revisor Ciego 1 de una revista científica internacional especializada en ciencias del suelo, agronomía y ecología de pasturas. No reescribas el manuscrito. Realiza una revisión adversarial y técnicamente rigurosa. Evalúa objetivos, diseño experimental, unidad experimental, pseudorreplicación, análisis estadísticos, interpretación biológica, correspondencia entre resultados y conclusiones, causalidad, soporte bibliográfico, consistencia de cifras y limitaciones. Clasifica cada observación como CRÍTICA, MAYOR o MENOR. Para cada observación indica la sección afectada, el problema concreto, la evidencia del manuscrito que genera la observación, por qué constituye un problema y qué tipo de corrección recomendarías. No inventes problemas para aumentar el número de observaciones. Si una decisión metodológica es defendible, indícalo. Entrega únicamente un informe de revisión. No modifiques el manuscrito.
+   
+   Resultado:
+   Informe_1_Gemini
+5. Enviar exactamente la misma versión a Claude — Revisor ciego 2. No le muestras el informe de Gemini.
+   Usas el mismo prompt, cambiando únicamente:
+   Actúa como Revisor Ciego 2...
+   
+   Resultado:
+   Informe_2_Claude
+   La independencia es importante:
+   \[
+   Gemini \not\leftrightarrow Claude
+   \]
+   Ninguno debe conocer las observaciones del otro.
+6. Regresar artículo + Informe 1 + Informe 2 a ScientistGer. Me entregas los tres archivos y ordenas:
+   ScientistGer: analiza conjuntamente el manuscrito, el Informe 1 de Gemini y el Informe 2 de Claude. Construye un único informe consolidado. Elimina observaciones duplicadas, identifica coincidencias y contradicciones entre los revisores y clasifica cada crítica como VÁLIDA, PARCIALMENTE VÁLIDA, DISCUTIBLE o INVÁLIDA. Para cada observación explica la decisión utilizando el diseño real, los datos, los análisis y la evidencia científica del manuscrito. No modifiques todavía el artículo. Entrégame primero la matriz consolidada de revisión.
+   
+   Producto:
+   \[
+   \boxed{\text{INFORME CONSOLIDADO}}
+   \]
+   Esta fase evita cometer el error de aceptar automáticamente todo lo que diga una IA.
+7. ScientistGer realiza la corrección científica. Después del informe consolidado utilizas:
+   ScientistGer: ejecuta la corrección científica del artículo utilizando únicamente las observaciones del informe consolidado clasificadas como válidas o parcialmente válidas. Corrige metodología, estadística, interpretación, discusión, referencias o conclusiones según corresponda. No adoptes las críticas clasificadas como inválidas. Conserva los datos originales y documenta cualquier modificación sustantiva. Devuélveme el artículo científicamente corregido.
+   
+   El responsable aquí es:
+   \[
+   \boxed{SCIENTISTGER}
+   \]
+   No Gemini.
+   No Claude.
+   No WriteGer.
+   ScientistGer corrige la ciencia.
+8. Aplicar WriteGer final. Como ScientistGer pudo modificar párrafos durante la corrección científica, hay que volver a estabilizar la escritura:
+   ScientistGer: aplica WriteGer final sobre esta versión científicamente corregida. No alteres ninguna corrección científica validada. Conserva cifras, resultados, referencias, unidades, tratamientos, especies e inferencias. Ejecuta la auditoría D_WG y detente cuando el texto esté dentro de mi rango auténtico.
+   
+   Resultado:
+   \[
+   \boxed{\text{ARTÍCULO TERMINADO}}
+   \]
+Después de este punto no se vuelve a aplicar otro humanizador, ni Gemini, ni Claude, ni otra reescritura.
+Si posteriormente escoges una revista y hay que cambiar extensión, formato, referencias, figuras o plantilla, eso es otra cosa:
+\[
+\text{Artículo terminado}
+\rightarrow
+\text{Adaptación editorial a la revista}
+\]
+No es volver a empezar el proceso científico.
+Función fija de cada herramienta
+Herramienta	Función
+ScientistGer	Control y corrección científica
+WriteGer	Compatibilidad con tu escritura real
+Gemini	Revisor ciego 1
+Claude	Revisor ciego 2
+Gerardo	Decisión final y autorización del manuscrito
+
+
+Así queda extremadamente fácil de recordar:
+\[
+\boxed{
+Artículo
+\rightarrow
+ScientistGer
+\rightarrow
+WriteGer
+\rightarrow
+Gemini+Claude
+\rightarrow
+ScientistGer
+\rightarrow
+WriteGer
+\rightarrow
+Artículo\ final
+}
+\]
+Y, para planificación, estimamos que un artículo que ya esté razonablemente avanzado puede recorrer todo este circuito en aproximadamente 1,5–3 horas de trabajo efectivo; uno con problemas importantes de diseño, estadística o referencias puede requerir 3–6 horas.
+Este es el protocolo que conviene conservar como Mapa Operativo Definitivo del Ecosistema de Artículos y no seguir cambiando de arquitectura cada vez que procesemos un manuscrito.
